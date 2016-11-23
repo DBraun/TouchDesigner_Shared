@@ -55,6 +55,9 @@ The tutorials most useful for me were davis.wpi.edu/~matt/courses/soms/ for over
 ### Kuwahara_paint.tox - Kuwahara Paint
 Taken from [Shadertoy](https://www.shadertoy.com/view/MdyXRt). Overall effect is sort of painterly. Buffer A takes an image and adds noise. Buffer B calculates the median and deviation on some square kernel (default width 3). "Image" denoises using the Kuwahara filter.
 
+### lookup_n_inputs.tox - Lookup N Inputs
+Give a 2D grayscale and N images, and you'll receive a composite of the images. Black in the grayscale will show the first image, and whiter values will result in higher order images approaching the Nth image.
+
 ### movie_out_with_alpha.tox - Movie Out With Alpha
 This component makes bottom-half-alpha images so that Movie File In TOPs elsewhere can treat the bottom half as alpha.
 
