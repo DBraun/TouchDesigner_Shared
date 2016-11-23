@@ -28,6 +28,9 @@ Wire a cube map into this component and cache it so that the cube map doesn't ne
 Gaussian Blur with two-pass separated filter, variable filter size, and bilinear texture lookups. Code was adapted from [ofxBlur](https://github.com/kylemcdonald/ofxBlur/blob/master/src/ofxBlur.cpp)
 [Derivative Thread](http://www.derivative.ca/Forum/viewtopic.php?f=4&t=9330&hilit=gaussian)
 
+### GLSL_kaleidoscope.tox - Kaleidoscope
+Kaleidoscopic effects with two modes and z-axis rotation. Code adapted from [Felix Turner](https://www.airtightinteractive.com/)
+
 ### GLSL_pack_packer.tox - GLSL Pack Packer
 Combine multiple images of the same resolution into one image with a larger resolution. This might be useful for combining multiple images before a Touch Out TOP.
 
@@ -43,9 +46,6 @@ A GLSL Top for generating criss-crossing lines of a specific pixel width and spa
 
 ### hexagonal_grid.tox - Hexagonal Grid
 Sample an image with a [hexagon grid](https://www.shadertoy.com/view/ls23Dc). (No license specified)
-
-### kaleidoscope.tox - Kaleidoscope
-Kaleidoscopic effects with two modes and z-axis rotation. Code adapted from [Felix Turner](https://www.airtightinteractive.com/)
 
 ### kohonen.tox - Kohonen Self-Organizing Map (SOM)
 I saw this [video](vimeo.com/189578632) by Reza Ali and thought I'd try my hand at it.
