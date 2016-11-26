@@ -12,6 +12,9 @@ Lens distortion effect with chromatic aberration from [Mikkel Gjoel](http://loop
 ### bitpacking.toe - Bitpacking
 Convert a 16-bit R-channel to 8-bit RGBA (you need half has many pixels). Convert a 16-bit RGBA to 8-bit RGBA (you need twice as many pixels). There are also examples for converting in the opposite direction.
 
+### Blur_and_Composite.toe - Blur and Composite
+A condensed GLSL pipeline for blurring and compositing (over/under/max).
+
 ### BrushStrokes.toe - Brush Strokes
 Based on a [Shadertoy](https://www.shadertoy.com/view/ldcSDB), use a reaction-diffusion buffer to spread colors in an image. (No license specified)
 
@@ -22,14 +25,35 @@ http://iquilezles.org/www/articles/palettes/palettes.htm Use the TOP to CHOP to 
 http://iquilezles.org/www/articles/palettes/palettes.htm Use the TOP to CHOP to figure out what the parameters do.
 
 ### cube_map_cache.tox - Cube Map Cache
-Wire a cube map into this component and cache it so that the cube map doesn't need to render continuously.
+Wire a cube map into this component and cache it so that the cube map doesn't need to render continuously. [Derivative Forum](http://www.derivative.ca/Forum/viewtopic.php?f=4&t=5935&hilit=render+demand)
+
+### feedback_HSV.tox - Feedback HSV
+A condensed GLSL pipeline for HSV feedback.
+
+### feedback_TOP_cross.tox - Feedback TOP Cross
+A condensed GLSL pipeline for feedback with a Cross TOP.
+
+### feedback_TOP_over.tox - Feedback TOP Over
+A condensed GLSL pipeline for feedback with an Over TOP.
+
+### frozen_image_detector.tox - Frozen Image Detector
+Detect if an image has stayed the same for too many frames. It's like an optimized Analyze TOP.
 
 ### gaussian_blur.tox - Gaussian Blur
 Gaussian Blur with two-pass separated filter, variable filter size, and bilinear texture lookups. Code was adapted from [ofxBlur](https://github.com/kylemcdonald/ofxBlur/blob/master/src/ofxBlur.cpp)
 [Derivative Thread](http://www.derivative.ca/Forum/viewtopic.php?f=4&t=9330&hilit=gaussian)
 
-### GLSL_kaleidoscope.tox - Kaleidoscope
+### GLSL_Cell_Rotate.tox - GLSL Cell Rotate
+Divide an image into a grid of rectangular cells. Each cell can rotate on its own axis.
+
+### GLSL_Kaleidoscope.tox - Kaleidoscope
 Kaleidoscopic effects with two modes and z-axis rotation. Code adapted from [Felix Turner](https://www.airtightinteractive.com/)
+
+### GLSL_Lookup_Table.tox - GLSL Lookup Table
+It's like a stepped UV map and is useful for the Remap TOP.
+
+### GLSL_Noise_Tile.tox - GLSL Noise Tile
+Create tileable non-symmetrical noise.
 
 ### GLSL_pack_packer.tox - GLSL Pack Packer
 Combine multiple images of the same resolution into one image with a larger resolution. This might be useful for combining multiple images before a Touch Out TOP.
@@ -58,8 +82,14 @@ Taken from [Shadertoy](https://www.shadertoy.com/view/MdyXRt). Overall effect is
 ### lookup_n_inputs.tox - Lookup N Inputs
 Give a 2D grayscale and N images, and you'll receive a composite of the images. Black in the grayscale will show the first image, and whiter values will result in higher order images approaching the Nth image.
 
+### Mask_Effect.tox - Mask Effect
+A utility for when you want to use a Circle TOP and a Matte TOP.
+
 ### movie_out_with_alpha.tox - Movie Out With Alpha
 This component makes bottom-half-alpha images so that Movie File In TOPs elsewhere can treat the bottom half as alpha.
+
+### SlitScanSimplest.tox - Slit Scan Simplest
+A simple slit scan effect based on [Static No.19](https://vimeo.com/77768949) by Daniel Crooks
 
 ### tex_3d_multi_in.tox - Tex 3D Multi-in
 This component takes any number of input TOPs and creates a Texture 3D holding all of them.
