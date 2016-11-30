@@ -16,7 +16,7 @@ Convert a 16-bit R-channel to 8-bit RGBA (you need half has many pixels). Conver
 A condensed GLSL pipeline for blurring and compositing (over/under/max).
 
 ### BrushStrokes.toe - Brush Strokes
-Based on a [Shadertoy](https://www.shadertoy.com/view/ldcSDB), use a reaction-diffusion buffer to spread colors in an image. (No license specified)
+Based on a [Shadertoy](https://www.shadertoy.com/view/ldcSDB) by [Cornus Ammonis](https://twitter.com/cornusammonis), use a reaction-diffusion buffer to spread colors in an image. (licensed CC BY 4.0)
 
 ### color_palette_bch_trigonometric.tox - Color Palette BCH Trigonometric
 http://iquilezles.org/www/articles/palettes/palettes.htm Use the TOP to CHOP to figure out what the parameters do. This uses the BCH color space. Behind the scenes it uses some extra trigonometry, but you can try to keep the parameters between 0 and 1. The final clamp occurs in RGB space.
