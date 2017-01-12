@@ -88,6 +88,9 @@ A utility for when you want to use a Circle TOP and a Matte TOP.
 ### movie_out_with_alpha.tox - Movie Out With Alpha
 This component makes bottom-half-alpha images so that Movie File In TOPs elsewhere can treat the bottom half as alpha.
 
+### perceptual_color.tox - Perceptual Color
+Why look at grayscale when you can look at color? This component contains color palettes come from [here](https://github.com/politiken-journalism/scale-color-perceptual).
+
 ### SlitScanSimplest.tox - Slit Scan Simplest
 A simple slit scan effect based on [Static No.19](https://vimeo.com/77768949) by Daniel Crooks
 
