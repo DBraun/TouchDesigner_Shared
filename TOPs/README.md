@@ -91,6 +91,9 @@ This component makes bottom-half-alpha images so that Movie File In TOPs elsewhe
 ### perceptual_color.tox - Perceptual Color
 Why look at grayscale when you can look at color? This component contains color palettes come from [here](https://github.com/politiken-journalism/scale-color-perceptual).
 
+### RGB_Separate.tox - RGB Separate
+Break an image into three different sums of colors (default would be R-G-B). Afterward, translate the three channels separately and add them back together.
+
 ### SlitScanSimplest.tox - Slit Scan Simplest
 A simple slit scan effect based on [Static No.19](https://vimeo.com/77768949) by Daniel Crooks
 
