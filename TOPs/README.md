@@ -27,6 +27,9 @@ http://iquilezles.org/www/articles/palettes/palettes.htm Use the TOP to CHOP to 
 ### cube_map_cache.tox - Cube Map Cache
 Wire a cube map into this component and cache it so that the cube map doesn't need to render continuously. [Derivative Forum](http://www.derivative.ca/Forum/viewtopic.php?f=4&t=5935&hilit=render+demand)
 
+### curl_noise_4D.tox - Curl Noise 4D
+Curl noise of a Simplex 3D or 4D vector field. This is great for driving velocities in particle simulations.
+
 ### feedback_HSV.tox - Feedback HSV
 A condensed GLSL pipeline for HSV feedback.
 
@@ -71,6 +74,14 @@ A GLSL Top for generating criss-crossing lines of a specific pixel width and spa
 ### hexagonal_grid.tox - Hexagonal Grid
 Sample an image with a [hexagon grid](https://www.shadertoy.com/view/ls23Dc). (No license specified)
 
+### hilbert_curve_2D.tox - Hilbert Curve 2D
+The 2D [https://en.wikipedia.org/wiki/Hilbert_curve](https://en.wikipedia.org/wiki/Hilbert_curve) at various iterations, as both TOPs and SOPs. Calculations were made with [scurve](https://github.com/cortesi/scurve)
+
+### hilbert_curve_3D.tox - Hilbert Curve 3D
+The 3D [https://en.wikipedia.org/wiki/Hilbert_curve](https://en.wikipedia.org/wiki/Hilbert_curve) at various iterations, as both TOPs and SOPs. Calculations were made with [scurve](https://github.com/cortesi/scurve)
+
+Change the hue of an image based on a 2D lookup map.
+
 ### kohonen.tox - Kohonen Self-Organizing Map (SOM)
 I saw this [video](vimeo.com/189578632) by Reza Ali and thought I'd try my hand at it.
 The tutorials most useful for me were [http://davis.wpi.edu/~matt/courses/soms/](http://davis.wpi.edu/~matt/courses/soms/) for overall info and [http://ai-junkie.com/ann/som/som1.html](http://ai-junkie.com/ann/som/som1.html) for code.
@@ -102,3 +113,6 @@ A simple slit scan effect based on [Static No.19](https://vimeo.com/77768949) by
 
 ### tex_3d_multi_in.tox - Tex 3D Multi-in
 This component takes any number of input TOPs and creates a Texture 3D holding all of them.
+
+### trigger_chop_vis.tox - Trigger Chop Visualization
+This component visualizes the parameters of a trigger CHOP with a familiar ADSR curve.
