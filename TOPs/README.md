@@ -3,6 +3,9 @@
 ### 2D_texture_array_averager.tox - 2D Texture Array Averager
 This will take a 2D Texture Array (from a Texture3D TOP) and add the layers together according to a geometric distribution. If the falloff is F, the most recent layer is weighted by 1.0, the second most recent by 1.0*F, the third by 1.0*F^2 and so on. If F is 1.0, then the result is like a Box Filter over the Cache (every layer is weighted equally). If F is 0.0, then only the most recent layer is shown.
 
+### a_b_tester.tox - A/B Tester TOP
+A tool for A/B comparing of images. It has labels so you know whether you're looking at A or B.
+
 ### barrel_blur.tox - Barrel Blur
 Lens distortion effect from [George Toledo](http://georgetoledo.com) (No license specified)
 
@@ -11,6 +14,9 @@ Lens distortion effect with chromatic aberration from [Mikkel Gjoel](http://loop
 
 ### bitpacking.toe - Bitpacking
 Convert a 16-bit R-channel to 8-bit RGBA (you need half has many pixels). Convert a 16-bit RGBA to 8-bit RGBA (you need twice as many pixels). There are also examples for converting in the opposite direction.
+
+### bloom_filter.tox - Bloom Filter
+My version of a bloom filter based on what I've read and seen in a few places. It thresholds an image, blurs it, levels it, and adds that top of the original image. It has two stages. The second stage uses the first blur pass as its input rather than the thresholded image. In this way, the blur is cumulative.
 
 ### Blur_and_Composite.toe - Blur and Composite
 A condensed GLSL pipeline for blurring and compositing (over/under/max).
@@ -30,6 +36,9 @@ Wire a cube map into this component and cache it so that the cube map doesn't ne
 ### curl_noise_4D.tox - Curl Noise 4D
 Curl noise of a Simplex 3D or 4D vector field. This is great for driving velocities in particle simulations.
 
+### equirectangular_littleplanet_shader.tox - Equirectangular "Little Planet" Shader
+Turn equirectangular images into "little planet" images. It has options for scale and X/Y rotation.
+
 ### feedback_HSV.tox - Feedback HSV
 A condensed GLSL pipeline for HSV feedback.
 
@@ -38,6 +47,9 @@ A condensed GLSL pipeline for feedback with a Cross TOP.
 
 ### feedback_TOP_over.tox - Feedback TOP Over
 A condensed GLSL pipeline for feedback with an Over TOP.
+
+### flood_fill.tox - Flood Fill
+An interactive tool for isolating sections of an image based on luminance or specific RGB channels.
 
 ### frozen_image_detector.tox - Frozen Image Detector
 Detect if an image has stayed the same for too many frames. It's like an optimized Analyze TOP.
@@ -80,6 +92,7 @@ The 2D [https://en.wikipedia.org/wiki/Hilbert_curve](https://en.wikipedia.org/wi
 ### hilbert_curve_3D.tox - Hilbert Curve 3D
 The 3D [https://en.wikipedia.org/wiki/Hilbert_curve](https://en.wikipedia.org/wiki/Hilbert_curve) at various iterations, as both TOPs and SOPs. Calculations were made with [scurve](https://github.com/cortesi/scurve)
 
+### HSV_lookup.tox - HSV Lookup
 Change the hue of an image based on a 2D lookup map.
 
 ### kohonen.tox - Kohonen Self-Organizing Map (SOM)

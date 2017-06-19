@@ -1,5 +1,8 @@
 [//]: # (For development of this README.md, use http://markdownlivepreview.com/)
 
+### make_define_statements.tox - Make Define Statements for GLSL
+This is a utility for making `#define` constants in GLSL shaders.
+
 ### random_sample.tox - Random Sample
 Sample N rows from a single column DAT.
 

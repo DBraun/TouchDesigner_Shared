@@ -1,5 +1,8 @@
 [//]: # (For development of this README.md, use http://markdownlivepreview.com/)
 
+### analyze_variance.tox - Analyze Variance (standard deviation)
+Calculate the standard deviation of a series of CHOP samples.
+
 ### cross_product.tox - Cross Product
 Calculate the cross product of two vectors.
 

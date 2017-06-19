@@ -12,6 +12,9 @@ A utility SOP for instancing the centers of cells if you know the grid size of c
 ### mirror_sop.tox - Mirror SOP
 Mirror SOPs over x-axis, etc.
 
+### scatter_sop.tox - Scatter SOP
+This is a parameterized version of Rob's Scatter SOP on the [forums](http://www.derivative.ca/Forum/viewtopic.php?f=4&t=6419&p=24443&hilit=scatter#p24463). Thanks Rob!
+
 ### Quadrilateral_SOP.tox - Quadrilateral SOP
 Build a four-pointed SOP.
 
