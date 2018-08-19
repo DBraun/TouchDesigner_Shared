@@ -112,6 +112,9 @@ A utility for when you want to use a Circle TOP and a Matte TOP.
 ### movie_out_with_alpha.tox - Movie Out With Alpha
 This component makes bottom-half-alpha images so that Movie File In TOPs elsewhere can treat the bottom half as alpha.
 
+### OpticalFlow.tox - Optical Flow
+Optical Flow visualizes the movement in an image. The red channel represents horizontal motion, and the green channel represents vertical motion. This tox also provides two debug modes for fine-tuning the optical flow parameters. The first mode is "Normal", which uses arrows to indicate the velocity around a region. The second mode is "Shading" which puts bright colors in high-motion areas and leaves inactive areas alone. Major portions of this tox come from reading the source code of [PixelFlow](https://github.com/diwi/PixelFlow/) (MIT License). Beware that the output is just an Red-Green channel image.
+
 ### perceptual_color.tox - Perceptual Color
 Why look at grayscale when you can look at color? This component contains color palettes come from [here](https://github.com/politiken-journalism/scale-color-perceptual).
 
@@ -128,4 +131,8 @@ A simple slit scan effect based on [Static No.19](https://vimeo.com/77768949) by
 This component takes any number of input TOPs and creates a Texture 3D holding all of them.
 
 ### trigger_chop_vis.tox - Trigger Chop Visualization
-This component visualizes the parameters of a trigger CHOP with a familiar ADSR curve.
+This component visualizes the parameters of a trigger CHOP with a familiar ADSR curve.### velocity_line_visualizer.tox - Velocity Line Visualizer
+Renders a velocity map as a field of lines that point in the direction of the region's velocity. Code is adapted from [PixelFlow](https://github.com/diwi/PixelFlow/). (MIT License)
+
+### velocity_surface_shader.tox - Velocity Surface Shader
+Renders a velocity map as a colorful image. Code is adapted from [PixelFlow](https://github.com/diwi/PixelFlow/). (MIT License)
