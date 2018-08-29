@@ -36,6 +36,9 @@ Wire a cube map into this component and cache it so that the cube map doesn't ne
 ### curl_noise_4D.tox - Curl Noise 4D
 Curl noise of a Simplex 3D or 4D vector field. This is great for driving velocities in particle simulations.
 
+### depth_of_field_pixelflow.tox - Depth of Field
+Depth of field using a depth pass and a GLSL TOP. You can specify a plane-of-focus distance value or a UV from which you can infer the POF. Code is adapted from [PixelFlow](https://github.com/diwi/PixelFlow) (MIT License)
+
 ### equirectangular_littleplanet_shader.tox - Equirectangular "Little Planet" Shader
 Turn equirectangular images into "little planet" images. It has options for scale and X/Y rotation.
 
