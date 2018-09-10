@@ -36,8 +36,11 @@ Wire a cube map into this component and cache it so that the cube map doesn't ne
 ### curl_noise_4D.tox - Curl Noise 4D
 Curl noise of a Simplex 3D or 4D vector field. This is great for driving velocities in particle simulations.
 
-### depth_of_field_pixelflow.tox - Depth of Field
+### depth_of_field_pixelflow.toe - Depth of Field
 Depth of field using a depth pass and a GLSL TOP. You can specify a plane-of-focus distance value or a UV from which you can infer the POF. Code is adapted from [PixelFlow](https://github.com/diwi/PixelFlow) (MIT License)
+
+### dither_style.tox - Dither Style
+8x8 Bayer matrix [dithering](http://devlog-martinsh.blogspot.se/2011/03/glsl-8x8-bayer-matrix-dithering.html).
 
 ### equirectangular_littleplanet_shader.tox - Equirectangular "Little Planet" Shader
 Turn equirectangular images into "little planet" images. It has options for scale and X/Y rotation.
@@ -114,6 +117,9 @@ A utility for when you want to use a Circle TOP and a Matte TOP.
 
 ### movie_out_with_alpha.tox - Movie Out With Alpha
 This component makes bottom-half-alpha images so that Movie File In TOPs elsewhere can treat the bottom half as alpha.
+
+### normals_pass_edge_detect.toe - Normals Pass Edge Detect
+Render the normals of geometry to RGB and do an edge detection. This is sometimes a good way to get a cartoony wireframe effect.
 
 ### OpticalFlow.tox - Optical Flow
 Optical Flow visualizes the movement in an image. The red channel represents horizontal motion, and the green channel represents vertical motion. This tox also provides two debug modes for fine-tuning the optical flow parameters. The first mode is "Normal", which uses arrows to indicate the velocity around a region. The second mode is "Shading" which puts bright colors in high-motion areas and leaves inactive areas alone. Major portions of this tox come from reading the source code of [PixelFlow](https://github.com/diwi/PixelFlow/) (MIT License). Beware that the output is just an Red-Green channel image.
