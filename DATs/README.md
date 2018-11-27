@@ -1,5 +1,8 @@
 [//]: # (For development of this README.md, use http://markdownlivepreview.com/)
 
+### csv_reader.tox - CSV Reader
+A CSV-in DAT with better parsing than a Table DAT beacuse it has parameters for delimiter and quotation marker.
+
 ### make_define_statements.tox - Make Define Statements for GLSL
 This is a utility for making `#define` constants in GLSL shaders.
 

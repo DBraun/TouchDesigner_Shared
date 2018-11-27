@@ -3,6 +3,9 @@
 ### analyze_variance.tox - Analyze Variance (standard deviation)
 Calculate the standard deviation of a series of CHOP samples.
 
+### catmull_rom.tox - Catmull Rom Spline
+Turn a list of XY points into a [Centripetal Catmull-Rom spline](https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline)
+
 ### cross_product.tox - Cross Product
 Calculate the cross product of two vectors.
 
