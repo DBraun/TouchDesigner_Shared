@@ -118,6 +118,9 @@ Give a 2D grayscale and N images, and you'll receive a composite of the images. 
 ### Mask_Effect.tox - Mask Effect
 A utility for when you want to use a Circle TOP and a Matte TOP.
 
+### motion_blur.toe - Motion Blur
+This is a motion-blur post-process based on [KinoMotion](https://github.com/keijiro/KinoMotion/). Both the camera and Geo COMPs can move in order to create motion blur. You will need to customize the GLSL Material to work with instanced objects.
+
 ### movie_out_with_alpha.tox - Movie Out With Alpha
 This component makes bottom-half-alpha images so that Movie File In TOPs elsewhere can treat the bottom half as alpha.
 
