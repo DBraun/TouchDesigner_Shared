@@ -24,6 +24,9 @@ A condensed GLSL pipeline for blurring and compositing (over/under/max).
 ### BrushStrokes.toe - Brush Strokes
 Based on a [Shadertoy](https://www.shadertoy.com/view/ldcSDB) by [Cornus Ammonis](https://twitter.com/cornusammonis), use a reaction-diffusion buffer to spread colors in an image. (licensed CC BY 4.0)
 
+### censor_bar.tox - Censor Bar
+Isolate a rectangular portion of an image and apply an effect to it. The rectangular zone can be rotated too.
+
 ### color_palette_bch_trigonometric.tox - Color Palette BCH Trigonometric
 http://iquilezles.org/www/articles/palettes/palettes.htm Use the TOP to CHOP to figure out what the parameters do. This uses the BCH color space. Behind the scenes it uses some extra trigonometry, but you can try to keep the parameters between 0 and 1. The final clamp occurs in RGB space.
 
@@ -114,6 +117,9 @@ Give a 2D grayscale and N images, and you'll receive a composite of the images. 
 
 ### Mask_Effect.tox - Mask Effect
 A utility for when you want to use a Circle TOP and a Matte TOP.
+
+### motion_blur.toe - Motion Blur
+This is a motion-blur post-process based on [KinoMotion](https://github.com/keijiro/KinoMotion/). Both the camera and Geo COMPs can move in order to create motion blur. You will need to customize the GLSL Material to work with instanced objects.
 
 ### movie_out_with_alpha.tox - Movie Out With Alpha
 This component makes bottom-half-alpha images so that Movie File In TOPs elsewhere can treat the bottom half as alpha.
