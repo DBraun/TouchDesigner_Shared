@@ -104,6 +104,9 @@ The 3D [https://en.wikipedia.org/wiki/Hilbert_curve](https://en.wikipedia.org/wi
 ### HSV_lookup.tox - HSV Lookup
 Change the hue of an image based on a 2D lookup map.
 
+### jump_flood_algorithm.tox - Jump Flood Algorithm
+Based on Thomas Diewald's implementation in [PixelFlow](https://github.com/diwi/PixelFlow) (MIT License) and [Jump Flooding in GPU with Applications to Voronoi Diagram and Distance Transform](https://www.comp.nus.edu.sg/~tants/jfa.html)
+
 ### kohonen.tox - Kohonen Self-Organizing Map (SOM)
 I saw this [video](vimeo.com/189578632) by Reza Ali and thought I'd try my hand at it.
 The tutorials most useful for me were [http://davis.wpi.edu/~matt/courses/soms/](http://davis.wpi.edu/~matt/courses/soms/) for overall info and [http://ai-junkie.com/ann/som/som1.html](http://ai-junkie.com/ann/som/som1.html) for code.
