@@ -127,6 +127,9 @@ This is a motion-blur post-process based on [KinoMotion](https://github.com/keij
 ### movie_out_with_alpha.tox - Movie Out With Alpha
 This component makes bottom-half-alpha images so that Movie File In TOPs elsewhere can treat the bottom half as alpha.
 
+### noise_looper.toe - Noise Looper
+Loop 2D/3D/4D Perlin/Simplex noise in time. The advanced version works with a UVW input, so you can provide an XYZ point cloud.
+
 ### normals_pass_edge_detect.toe - Normals Pass Edge Detect
 Render the normals of geometry to RGB and do an edge detection. This is sometimes a good way to get a cartoony wireframe effect.
 
