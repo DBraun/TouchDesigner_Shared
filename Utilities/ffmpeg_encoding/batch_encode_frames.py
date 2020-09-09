@@ -90,7 +90,7 @@ if VCODEC == 'hap_q' or VCODEC == 'hap_alpha':
 	FORMAT = VCODEC
 	VCODEC = 'hap'
 
-paths = glob.glob(DIRECTORY+'/*') if DIRECTORY is not '' else glob.glob('*')
+paths = glob.glob(DIRECTORY+'/*') if DIRECTORY != '' else glob.glob('*')
 paths = [p for p in paths if os.path.isdir(p)] # keep only directories
 
 pattern = re.compile('.*?(\d*)\D*\.'+EXTENSION) # for regex later

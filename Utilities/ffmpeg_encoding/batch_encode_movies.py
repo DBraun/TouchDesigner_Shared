@@ -85,7 +85,7 @@ if VCODEC == 'hap_q' or VCODEC == 'hap_alpha':
 	FORMAT = VCODEC
 	VCODEC = 'hap'
 
-paths = glob.glob(DIRECTORY+'/**', recursive=True) if DIRECTORY is not '' else glob.glob('*')
+paths = glob.glob(DIRECTORY+'/**', recursive=True) if DIRECTORY != '' else glob.glob('*')
 paths = [p for p in paths if os.path.isfile(p)] # keep only files
 video_extensions = ['webm','mkv','flv','mov','gif','avi','wmv','mp4','mv4','mpg','mp2','mpeg','mpv','m4v']
 paths = [p for p in paths if str(os.path.splitext(p)[1])[1:] in video_extensions]
