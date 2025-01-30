@@ -2,10 +2,9 @@
 
 from dataclasses import dataclass, replace
 import enum
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 from TDStoreTools import StorageManager
-import TDFunctions as TDF
 
 
 # This class is not stored anywhere. It is implicitly stored by the timer_container CHOP.
@@ -27,22 +26,23 @@ class TransitionState(enum.IntEnum):
     TRANSITIONING = 2
 
 
-@dataclass
+@dataclass(frozen=True)
 class State:
     """
     Encapsulates the entire state.
     """
     scene: str
-    state: TransitionState = None  # State in the transition (HOLD, WILL_TRANSITION, TRANSITIONING)
-    prev_scene: str = None
-    target_scene: str = None
+    state: Optional[TransitionState] = None
+    prev_scene: Optional[str] = None
+    target_scene: Optional[str] = None
     
     def __post_init__(self):
+        # note: we circumvent the frozen=True restriction by using `__setattr__`
         if self.prev_scene is None:
-            self.prev_scene = self.scene
+            object.__setattr__(self, 'prev_scene', self.scene)
         if self.target_scene is None:
-            self.target_scene = self.scene
-    
+            object.__setattr__(self, 'target_scene', self.scene)
+
     def __repr__(self):
         if self.state == TransitionState.HOLD:
             state = "HOLD"
@@ -61,6 +61,7 @@ class ControllerExt:
     def __init__(self, ownerComp, initial_scene: str, allowed_transitions: Dict[str, List[str]]):
         # The component to which this extension is attached
         self.ownerComp = ownerComp
+
         self.timer_container = ownerComp.op('timer_container')
         self.timer_scene = ownerComp.op('timer_scene')
           
@@ -93,7 +94,7 @@ class ControllerExt:
         return True
         
     def AskDisappear(self) -> bool:
-        # Subclasses shouldn't need to modify this
+        # Subclasses shouldn't need to modify this.
         if self.timer_container.segment == ContainerState.VISIBLE and self.ask_disappear():
             self.timer_container.goTo(segment=ContainerState.WILL_DISAPPEAR)
             return True
@@ -158,7 +159,6 @@ class ControllerExt:
             return False
             
     def hold_start(self):
-        # User logic can go here.
         pass
 
     def _hold_start(self):
@@ -170,7 +170,6 @@ class ControllerExt:
         self.hold_start()
         
     def will_transition_start(self):
-    	# User logic for preparation can go here.
     	pass
 
     def _will_transition_start(self):
@@ -181,7 +180,6 @@ class ControllerExt:
         self.will_transition_start()
         
     def will_transition_done(self):
-        # User logic can go here.
         pass
 
     def _will_transition_done(self):
@@ -194,7 +192,6 @@ class ControllerExt:
         self.will_transition_done()
         
     def transitioning_start(self):
-        # Logic for transition effects can go here.
         pass
 
     def _transitioning_start(self):
@@ -210,6 +207,7 @@ class ControllerExt:
     def _transitioning_done(self):
         """
         Called when exiting TRANSITIONING state.
+        Subclasses should implement transitioning_done instead of modifying this.
         """
         self.State = replace(self.State, prev_scene=self.State.scene, scene=self.State.target_scene, state=TransitionState.HOLD)
         self.timer_scene.goTo(segment=TransitionState.HOLD)
@@ -221,6 +219,7 @@ class ControllerExt:
     def _while_transition_active(self, fraction):
         """
         Called continuously during the transition process.
+        Subclasses should implement while_transition_active instead of modifying this.
         """
         self.while_transition_active(fraction)
         
