@@ -7,7 +7,8 @@ from typing import Dict, List, Optional
 from TDStoreTools import StorageManager
 
 
-# This class is not stored anywhere. It is implicitly stored by the timer_container CHOP.
+# This class is not stored anywhere.
+# It's simply an enum for comparing with the `.segment` property of the timer_container CHOP.
 class ContainerState(enum.IntEnum):
     WILL_APPEAR = 0
     APPEARING = 1
@@ -18,10 +19,6 @@ class ContainerState(enum.IntEnum):
 
 
 class TransitionState(enum.IntEnum):
-    """
-    Composite state combining current scene, transition type, and target scene.
-    """
-
     HOLD = 0
     WILL_TRANSITION = 1
     TRANSITIONING = 2
@@ -33,7 +30,7 @@ class State:
     Encapsulates the entire state.
     """
 
-    scene: str
+    scene: str  # current scene
     state: Optional[TransitionState] = None
     prev_scene: Optional[str] = None
     target_scene: Optional[str] = None
@@ -72,7 +69,7 @@ class ControllerExt:
 
         self.allowed_transitions = allowed_transitions
 
-        # Stored items: persistent data like the game board
+        # Stored items: persistent data
         state = State(scene=initial_scene, state=TransitionState.HOLD)
         storedItems = [
             {
